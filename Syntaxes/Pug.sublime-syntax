@@ -180,14 +180,18 @@ contexts:
   # Unbuffered Comments for Pug Sublime Syntax
   
   unbuffered_comments:
-    - match: '(//-)'
+    - match: '\s*(//-)'
       scope: comment.unbuffered.declaration.pug
       push:
-        - meta_scope: meta.comment.pug
-        - meta_content_scope: comment.unbuffered.block.pug
-        - include: jsdoc
-        - match: $
+        - meta_scope: meta.comment.unbuffered.pug
+        - meta_content_scope: comment.unbuffered.line.pug
+        - match: ^(?>!(\1\s*)|\s*$)
+          captures:
+            1: comment.unbuffered.block.pug
           pop: true
+        - include: jsdoc
+
+
   
   # Buffered Comments for Pug Sublime Syntax
   
@@ -196,8 +200,11 @@ contexts:
       scope: string.comment.buffered.declaration.pug
       push:
         - meta_scope: string.comment.buffered.line.pug
-        - match: $
+        - match: ^(?>!(\1\s*)|\s*$)
+          captures:
+            1: string.comment.buffered.block.pug
           pop: true
+
   
   # JSDoc for Pug Sublime Syntax
 
@@ -247,12 +254,13 @@ contexts:
   # JSDoc Values for Pug Sublime Syntax
 
   jsdoc_values:
-    - match: '(?:\s+)\b([a-zA-Z0-9_\-]*)\b\s*'
+    - match: '(?:\s+)\b([a-zA-Z0-9_\-\s]*)\b\s*'
       scope: string.unquoted.jsdoc.value.pug
       push:
         - include: jsdoc_value_separator
         - match: ''
           pop: true
+
 
   # JSDoc Braces for Pug Sublime Syntax
 

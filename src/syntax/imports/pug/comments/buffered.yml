@@ -6,5 +6,7 @@
       scope: string.comment.buffered.declaration.pug
       push:
         - meta_scope: string.comment.buffered.line.pug
-        - match: $
+        - match: ^(?>!(\1\s*)|\s*$)
+          captures:
+            1: string.comment.buffered.block.pug
           pop: true

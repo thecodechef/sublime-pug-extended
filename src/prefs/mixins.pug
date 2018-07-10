@@ -1,9 +1,11 @@
 
 //- Block Mixins
 
-//- @mixin: plist
-//- @type: block
-//- @param: version { @type: string }
+//- 
+  @mixin: plist
+  @type: block
+  @param: version { @type: string }
+
 mixin plist(version="1.0")
   doctype xml
   = '\n'
@@ -12,9 +14,11 @@ mixin plist(version="1.0")
     if block
       block
 
-//- @mixin: dict
-//- @type: block
-//- @param: dictName { @type: string }
+//- 
+  @mixin: dict 
+  @type: block
+  @param: dictName { @type: string }
+
 mixin dict(dictName="")
   if dictName
     key= dictName
@@ -26,9 +30,11 @@ mixin dict(dictName="")
       if block
         block
 
-//- @mixin: array
-//- @type: block
-//- @param: arrayName { @type: string }
+//- 
+  @mixin: array
+  @type: block
+  @param: arrayName { @type: string }
+
 mixin array(arrayName="")
   if arrayName
     key= arrayName
@@ -46,6 +52,7 @@ mixin array(arrayName="")
 //- @mixin: name
 //- @type: inline
 //- @param: name { @type: string }
+
 mixin name(name="")
   key name
   string= name
@@ -53,14 +60,17 @@ mixin name(name="")
 //- @mixin: scope
 //- @type: inline
 //- @param: scope { @type: string }
+
 mixin scope(scope="")
   key scope
   string= scope
 
-//- @mixin: key
-//- @type: inline | block
-//- @param key { @type: string }
-//- @param string { @type: string }
+//- 
+  @mixin: key
+  @type: inline | block
+  @param key { @type: string }
+  @param string { @type: string }
+
 mixin key(key, string)
   if key && string
     key= key
