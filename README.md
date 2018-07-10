@@ -52,15 +52,15 @@ ___
 
 ### Recommended Packages for Development
 
-  - [A File Icon]
-  - [AdvancedNewFile]
-  - [AlignTab]
-  - [EditorConfig]
-  - [DotENV]
-  - [PackageDev]
-  - [PackageResourceViewer]
-  - [SideBarEnhancements]
-  - [Terminal]
+  * [A File Icon][a-file-icon]
+  * [AdvancedNewFile][advanced-new-file]
+  * [AlignTab][align-tab]
+  * [EditorConfig][editor-config]
+  * [DotENV][dot-env]
+  * [PackageDev][package-dev]
+  * [PackageResourceViewer][package-resource-viewer]
+  * [SideBarEnhancements][sidebar-enhancements]
+  * [Terminal][terminal]
 
 ### Patrons
 
@@ -78,7 +78,6 @@ ___
 	<!-- Patreon Button -->
 	<a href="https://www.patreon.com">
 		<img src="./assets/patreon.png" alt="Patreon Donation">
-		<span>Patreon</span>
   </a>
 </p>
 
@@ -110,14 +109,12 @@ SOFTWARE.
 
 ***
 
-[A File Icon]: (https://github.com/ihodev/a-file-icon)
-[AdvancedNewFile]: (https://github.com/skuroda/Sublime-AdvancedNewFile)
-[AlignTab]: (https://github.com/randy3k/AlignTab)
-[EditorConfig]: (https://github.com/sindresorhus/editorconfig-sublime)
-[DotENV]: (https://github.com/zaynali53/DotENV)
-[PackageDev]: (https://github.com/SublimeText/PackageDev)
-[PackageResourceViewer]: (https://github.com/skuroda/PackageResourceViewer)
-[SideBarEnhancements]: (https://github.com/SideBarEnhancements-org/SideBarEnhancements)
-[Terminal]: (https://github.com/wbond/sublime_terminal)
-
-[1.0.0]: (https://github.com/thecodechef/sublime-pug-extended/tags/1.0.0)
+[a-file-icon]: https://github.com/ihodev/a-file-icon
+[advanced-new-file]: https://github.com/skuroda/Sublime-AdvancedNewFile
+[align-tab]: https://github.com/randy3k/AlignTab
+[editor-config]: https://github.com/sindresorhus/editorconfig-sublime
+[dot-env]: https://github.com/zaynali53/DotENV
+[package-dev]: https://github.com/SublimeText/PackageDev
+[package-resource-viewer]: https://github.com/skuroda/PackageResourceViewer
+[sidebar-enhancements]: https://github.com/SideBarEnhancements-org/SideBarEnhancements
+[terminal]: https://github.com/wbond/sublime_terminal
