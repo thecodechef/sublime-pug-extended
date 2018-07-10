@@ -1,0 +1,11 @@
+
+  # Event Attributes for Pug Sublime Syntax
+
+  event_attirbute:
+    - match: '\b({{event_attributes}})\b'
+      captures:
+        1: keyword.name.tag.attributes.event.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: ''
+          pop: true

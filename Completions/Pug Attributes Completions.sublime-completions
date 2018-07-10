@@ -1,0 +1,21 @@
+/**
+ * Pug Extended - A Updated Pug Syntax with Front-Matter & JSDoc Support
+ * @version v1.0.0
+ * @homepage https://www.github.com/thecodechef/sublime-pug-extended.git
+ * @issues https://www.github.com/thecodechef/sublime-pug-extended/issues
+ */
+[
+  {
+    "scope": "source.pug - meta.attributes.pug",
+    "completions": [
+      {
+        "trigger": "class\tClass Attribute",
+        "contents": "class=${1:class}"
+      },
+      {
+        "trigger": "id\tId Attribute",
+        "contents": "id=${1:id}"
+      }
+    ]
+  }
+]

@@ -1,0 +1,14 @@
+{
+  "cmd": [
+    "pug",
+    "$file",
+    "--pretty"
+  ],
+  "selector": "source.pug",
+  "osx": {
+    "path": "/usr/local/bin:$PATH"
+  },
+  "windows": {
+    "shell": true
+  }
+}

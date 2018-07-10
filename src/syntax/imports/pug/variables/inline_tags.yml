@@ -1,0 +1,16 @@
+
+  # Inline Tag Variable for Pug Sublime Syntax
+  
+  inline_tags: |-
+    (?x)\b(
+      a       |
+      abbr    |
+      acronym |
+      address |
+      applet  |
+      article |
+      aside   |
+      audio   |
+      link    |
+      meta
+    )\b

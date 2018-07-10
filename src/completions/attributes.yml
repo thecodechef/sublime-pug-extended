@@ -1,0 +1,7 @@
+-
+  # Attributes Completions for Pug Sublime Syntax
+  
+  scope: source.pug - meta.attributes.pug
+  completions:
+    - {trigger: "class\tClass Attribute", contents: "class=${1:class}"}
+    - {trigger: "id\tId Attribute", contents: "id=${1:id}"}

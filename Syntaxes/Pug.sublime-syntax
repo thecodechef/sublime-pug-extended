@@ -1,0 +1,682 @@
+%YAML 1.2
+---
+name: Pug
+file_extensions:
+  - pug
+scope: source.pug
+
+# Variables for Pug Sublime Syntax
+
+variables:
+  
+  # Block Tag Variable for Pug Sublime Syntax
+  
+  block_tags: |-
+    (?x)\b(
+      a     |
+      body  |
+      div   |
+      h([1-6]+|group)|
+      head  |
+      html  |
+      li    |
+      ol    |
+      title |
+      ul
+    )\b
+
+  # Inline Tag Variable for Pug Sublime Syntax
+  
+  inline_tags: |-
+    (?x)\b(
+      a       |
+      abbr    |
+      acronym |
+      address |
+      applet  |
+      article |
+      aside   |
+      audio   |
+      link    |
+      meta
+    )\b
+
+  # Form Tag Variable for Pug Sublime Syntax
+  
+  form_tags: |-
+    (?x)\b(
+      button   |
+      datalist |
+      input    |
+      label    |
+      legend   |
+      meter    |
+      optgroup |
+      option   |
+      output   |
+      progress |
+      select   |
+      template |
+      textarea
+    )\b
+
+  # Event Attributes Variable for Pug Sublime Syntax
+  
+  event_attributes: |-
+    (?x)\bon(
+      click|mousemove
+    )\b
+
+  # JSDoc Keyword Variables for Pug Sublime Syntax
+  
+  jsdoc_keywords_builtins: |-
+    (?x)
+      abstract            |
+      access              |
+      alias               |
+      arg(?:ument)?       |
+      async               |
+      augments            |
+      author              |
+      borrows             |
+      callback            |
+      class(?:desc)?      |
+      constant            |
+      constructs          |
+      copyright           |
+      default(?:value)?   |
+      depraceted          |
+      desc(?:ription)?    |
+      emits               |
+      enum                |
+      example             |
+      exception           |
+      exports             |
+      extends             |
+      external            |
+      file(?:overview)?   |
+      fires               |
+      func(?:tion)?       |
+      generator           |
+      global              |
+      hideconstructor     |
+      host                |
+      inheritdoc          |
+      inner               |
+      instance            |
+      interface           |
+      kind                |
+      lends               |
+      license             |
+      link(?:code|plain)? |
+      listens             |
+      memberof            |
+      mixin               |
+      module              |
+      name                |
+      namespace           |
+      override            |
+      overview            |
+      package             |
+      param               |
+      private             |
+      project             |
+      prop(?:erty)?       |
+      protected           |
+      public              |
+      readonly            |
+      requires            |
+      returns?            |
+      see                 |
+      static              |
+      this                |
+      throws              |
+      todo                |
+      tutorial            |
+      type(?:def)?        |
+      var(?:iation)?      |
+      version             |
+      virtual             |
+      yields?
+  jsdoc_keywords_other: ([a-zA-Z0-9_\-])
+
+  # Pug Keywords for Pug Sublime Syntax
+  
+  mixin_keyword: \b(mixin)\b
+  mixin_attributes_declaration: (\&)(attributes)\b
+  block_keywords: |-
+    \b(extends|block|append|prepend|block (?:append|prepend)|yield)\b
+  conditional_keywords: |-
+    \b(if|else|else if|case|when|default|unless)\b
+  iteration_keywords: |-
+    \b(for|each|while|break|continue)\b
+  include_keyword: \b(include)\b
+
+
+contexts:
+  
+  # Main Context for Pug Sublime Syntax
+  
+  main:
+    - include: unbuffered_comments
+    - include: buffered_comments
+    - include: doctypes
+    - include: block_tags
+    - include: inline_tags
+    - include: form_tags
+    - include: mixin_keyword
+    - include: include_keyword
+    - include: filters
+    - include: class_literals
+    - include: id_literals
+    - include: plain_text
+    - include: punctuations
+    - include: interpolation
+    - include: embedded_front_matter
+    - include: embedded_js
+    - include: embedded_php
+    - include: embedded_html
+  
+  # Unbuffered Comments for Pug Sublime Syntax
+  
+  unbuffered_comments:
+    - match: '(//-)'
+      scope: comment.unbuffered.declaration.pug
+      push:
+        - meta_scope: meta.comment.pug
+        - meta_content_scope: comment.unbuffered.block.pug
+        - include: jsdoc
+        - match: $
+          pop: true
+  
+  # Buffered Comments for Pug Sublime Syntax
+  
+  buffered_comments:
+    - match: '(//)'
+      scope: string.comment.buffered.declaration.pug
+      push:
+        - meta_scope: string.comment.buffered.line.pug
+        - match: $
+          pop: true
+  
+  # JSDoc for Pug Sublime Syntax
+
+  jsdoc:
+    - include: jsdoc_keywords
+
+  
+  # JSDoc Keywords for Pug Sublime Syntax
+  
+  jsdoc_keywords:
+    - match: '(@)\b({{jsdoc_keywords_builtins}})\b'
+      captures:
+        1: keyword.control.jsdoc.keywords.builtins.declaration.pug
+        2: keyword.control.jsdoc.keywords.builtins.word.pug
+      push:
+        - meta_scope: meta.jsdoc.keyword.pug
+        - include: jsdoc_separator
+        - include: jsdoc_values
+        - include: jsdoc_parens
+        - match: ''
+          pop: true
+    - match: '(@)\b({{jsdoc_keywords_other}})\b'
+      captures:
+        1: keyword.control.jsdoc.keywords.other.declaration.pug
+        2: keyword.control.jsdoc.keywords.other.word.pug
+      push:
+        - meta_scope: meta.jsdoc.keyword.pug
+        - include: jsdoc_separator
+        - include: jsdoc_values
+        - include: jsdoc_parens
+        - match: ''
+          pop: true
+
+  # JSDoc Separator for Pug Sublime Syntax
+
+  jsdoc_separator:
+    - match: '(:)'
+      scope: punctuation.separator.mapping.key-value.jsdoc.pug
+      push:
+        - match: ''
+          pop: true
+  
+  jsdoc_value_separator:
+    - match: '(\|)'
+      scope: punctuation.separator.value.jsdoc.pug
+
+  # JSDoc Values for Pug Sublime Syntax
+
+  jsdoc_values:
+    - match: '(?:\s+)\b([a-zA-Z0-9_\-]*)\b\s*'
+      scope: string.unquoted.jsdoc.value.pug
+      push:
+        - include: jsdoc_value_separator
+        - match: ''
+          pop: true
+
+  # JSDoc Braces for Pug Sublime Syntax
+
+  jsdoc_parens:
+    - match: '(\{)'
+      scope: punctuation.section.braces.jsdoc.inline-statement.begin.pug
+      push:
+        - meta_scope: meta.jsdoc.inline-statement.pug
+        - include: jsdoc_keywords
+        - match: '(\})'
+          scope: punctuation.section.braces.jsdoc.inline-statement.end.pug
+          pop: true
+# Tags for Pug Sublime Syntax
+
+# Doctypes for Pug Sublime Syntax
+
+  doctypes:
+    - match: '\b(doctype)\b'
+      scope: 'entity.name.tag.doctype.pug'
+      push:
+        - match: '\s*\b(xml|html|traditional|strict|frameset|1\.1|basic|mobile|plist|)\b'
+          scope: keyword.control.tag.doctype.builtins.pug
+        - match: '\s*\b([a-zA-Z0-9_\-]*)\b'
+          scope: keyword.control.tag.doctype.other.pug
+        - include: strings
+        - match: $
+          pop: true
+# Block Tags for Pug Sublime Syntax
+
+  block_tags:
+    - match: '{{block_tags}}'
+      scope: entity.name.tag.pug
+      push:
+        - meta_scope: meta.tag.pug
+        - include: class_literals
+        - include: id_literals
+        - include: tag_attribute_parens
+        - match: ''
+          pop: true
+# Inline Tags for Pug Sublime Syntax
+
+  inline_tags:
+    - match: '{{inline_tags}}'
+      scope: entity.name.tag.pug
+      push:
+        # - include: class_literals
+        # - include: id_literals
+        # - include: tag_attribute_parens
+        - match: $
+          pop: true
+# Form Tags for Pug Sublime Syntax
+
+  form_tags:
+    - match: '{{form_tags}}'
+      scope: entity.name.tag.structure.form.pug
+      push:
+        - include: class_literals
+        - include: id_literals
+        - include: tag_attribute_parens
+        - match: $
+          pop: true
+
+# Attributes for Pug Sublime Syntax
+  
+# Tag Attribute Brackets for Pug Sublime Syntax
+
+  tag_attribute_parens:
+    - match: '(?:{{block_tags}}|{{inline_tags}}|{{form_tags}})\('
+      scope: punctuation.section.parens.begin.pug
+      push:
+        - meta_scope: meta.tag.attributes.pug
+        - match: '\)$'
+          scope: punctuation.section.parens.end.pug
+          pop: true
+
+  # Id Attribute for Pug Sublime Syntax
+
+  id_attribute:
+    - match: '\b(id)\b'
+      captures:
+        1: storage.type.tag.attribute.id.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true
+
+  # Class Attribute for Pug Sublime Syntax
+
+  class_attribute:
+    - match: '\b(class)\b'
+      captures:
+        1: storage.type.tag.attribute.class.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true
+
+  # Style Attribute for Pug Sublime Syntax
+
+  style_attribute:
+    - match: '\b(style)\b'
+      captures:
+        1: storage.type.tag.attribute.style.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true
+
+  # Event Attributes for Pug Sublime Syntax
+
+  event_attirbute:
+    - match: '\b({{event_attributes}})\b'
+      captures:
+        1: keyword.name.tag.attributes.event.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: ''
+          pop: true
+
+  # Generic Attributes for Pug Sublime Syntax
+
+  generic_attribute:
+    - match: '\b(data-[a-z\-]*|aria-[a-z\-]*|[a-z\-]*)\b'
+      captures:
+        1: storage.type.tag.attribute.generic.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true
+# Keywords for Pug Sublime Syntax
+
+  #
+# Builtin Keywords for Pug Sublime Syntax
+
+  ## Other Keywords for Pug Sublime Syntax
+  ## Block Keyword for Pug Sublime Syntax
+  ## Append Keyword for Pug Sublime Syntax
+  ## Prepend Keyword for Pug Sublime Syntax
+  #
+  # Extend Keyword for Pug Sublime Syntax
+  
+
+  # Mixin Keyword for Pug Sublime Syntax
+
+  mixin_keyword:
+    - match: '({{mixin_keyword}})'
+      captures: 
+        1: keyword.control.mixin.declaration.pug
+      push:
+        - meta_scope: meta.mixin.pug
+        - match: $
+          pop: true
+        - include: mixin_definitions
+        - include: mixin_definitions_args
+    
+    - match: '(\+)'
+      captures: 
+        1: keyword.control.mixin.declaration.pug
+      push:
+        - meta_scope: meta.mixin.pug
+        - match: $
+          pop: true
+        - include: mixin_calls
+        - include: mixin_calls_args
+
+  # Include Keyword for Pug Sublime Syntax
+  
+  include_keyword:
+    - match: '{{include_keyword}}'
+      scope: 'keyword.control.include.declaration.pug'
+      push:
+        - meta_scope: meta.path.includes.pug
+        - meta_content_scope: string.unqouted.includes-string.pug
+        - match: $
+          pop: true
+        - include: filters
+# Strings for Pug Sublime Syntax
+  
+  strings:
+    - include: double_quoted_strings
+    - include: single_quoted_strings
+  
+  double_quoted_strings:
+    - match: (\")
+      captures:
+        1: punctuation.definition.string.begin.pug 
+      push:
+        - meta_content_scope: string.quoted.double.pug
+        - match: (\")
+          captures:
+            1: punctuation.definition.string.end.pug
+          pop: true
+  
+  single_quoted_string:
+    - match: (\')
+      captures:
+        1: punctuation.definition.string.begin.pug 
+      push:
+        - meta_content_scope: string.quoted.single.pug
+        - match: (\')
+          captures:
+            1: punctuation.definition.string.end.pug
+          pop: true
+
+# Filters for Pug Sublime Syntax
+
+  filters:
+    - match: '(:)'
+      captures:
+        1: entity.name.function.filter.declaration.pug
+      push:
+        - meta_scope: meta.filter.pug
+        - match: '\b([a-z\-]*)\b'
+          captures:
+            1: constant.language.filter.name.pug
+          push:
+            - include: filters
+            - include: filter_args
+            - match: '$'
+              pop: true
+        
+        - match: '$'
+          pop: true
+  
+  filter_args:
+    - match: (\()
+      captures:
+        1: punctuation.definition.string.filter.arguments.bracket.begin.pug
+      push:
+        - meta_scope: meta.filter.args.pug
+        - match: '\b([a-zA-Z0-9_\-]*)\b'
+          captures:
+            1: storage.type.filter.arguments.key.pug
+          push:
+            - match: '([a-zA-Z0-9_\-]*)(\=)'
+              captures:
+                2: punctuation.separator.mapping.key-value.filter.pug
+              push:
+                - include: strings
+                - match: (\))
+                  captures:
+                    1: punctuation.definition.string.filter.arguments.bracket.end.pug
+                  push:
+                    - include: filters
+                    - match: $
+                      pop: true
+# Literals for Pug Sublime Syntax
+
+# Class Literals for Pug Sublime Syntax
+
+  class_literals:
+    - match: '(\.)([a-zA-Z0-9_\-]*)\b'
+      captures:
+        1: keyword.control.literal.class.declaration.pug
+        2: keyword.control.literal.class.name.pug
+      push:
+        - include: tag_attribute_parens
+        - match: $
+          pop: true
+# Id Literals for Pug Sublime Syntax
+
+  id_literals:
+    - match: '(#)([a-zA-Z0-9_\-]*)\b'
+      captures:
+        1: keyword.control.literal.id.declaration.pug
+        2: keyword.control.literal.id.name.pug
+      push:
+        - include: tag_attribute_parens
+        - match: $
+          pop: true
+# Plain Text for Pug Sublime Syntax
+
+  
+  # Plain Text for Pug Sublime Syntax
+  
+  plain_text:
+    - match: '\s*(\|)\s*'
+      scope: keyword.operator.assignment.pug
+      push:
+        - match: (\w*)
+          scope: string.unquoted.plain-text.pug
+        - include: strings
+        - match: $
+          pop: true
+
+# Punctuation for Pug Sublime Syntax
+
+  punctuations:
+    - include: rest_arguments_punctuation
+
+  rest_arguments_punctuation:
+    - match: '\.\.\.'
+      scope: punctuation.definition.rest-args.pug
+      push:
+        - match: ''
+          pop: true
+# Interpolation for Pug Sublime Syntax
+
+  interpolation:
+    - match: '(\$\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.variable.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.variable.end.pug
+    - match: '(\#\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.hash.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.hash.end.pug
+    - match: '(\!\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.unescaped.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.unescaped.end.pug
+    - match: '(\#\[)'
+      captures:
+        1: punctuation.definition.escaped.tag.begin.pug
+      push:
+        - meta_scope: meta.escaped.tag.pug
+        - include: main
+        - match: '(\])'
+          captures:
+            1: punctuation.definition.escaped.tag.end.pug
+          pop: true
+    - match: '(\!\[)'
+      captures:
+        1: punctuation.definition.unescaped.tag.begin.pug
+      push:
+        - meta_scope: meta.unescaped.tag.pug
+        - include: main
+        - match: '(\])'
+          captures:
+            1: punctuation.definition.unescaped.tag.end.pug
+          pop: true
+
+  # Mixin Definitions for Pug Sublime Syntax
+
+  mixin_definitions:
+    - match: '(?:{{mixin_keyword}})\s*?(\w*)'
+      captures:
+        1: entity.name.function.mixin.definition.name.pug
+
+  # Mixin Calls for Pug Sublime Syntax
+
+  mixin_calls:
+    - match: '(?:\+)(\w*)'
+      captures:
+        1: entity.name.function.mixin.calls.name.pug
+
+  # Mixin Arguments for Pug Sublime Syntax
+
+  mixin_definition_args:
+    - match: '(?:{{mixin_keyword}}\s*?(\w*))(\()'
+      captures:
+        1: punctuation.section.parens.mixin.definitions.arguments.begin.pug
+      push:
+        - meta_scope: meta.mixin.args.pug
+        - match: '(\))'
+          captures:
+            1: punctuation.section.parens.mixin.definitions.arguments.end.pug
+          pop: true
+
+  mixin_calls_args:
+    - match: '(?:\+(\w*))(\()'
+      captures:
+        1: punctuation.section.parens.mixin.calls.arguments.begin.pug
+      push:
+        - meta_scope: meta.mixin.args.pug
+        - match: '(\))'
+          captures:
+            1: punctuation.section.parens.mixin.calls.arguments.end.pug
+          pop: true
+  
+  # Embedded Front Matter for Pug
+
+  embedded_front_matter:
+    - match: '^---$'
+      scope: comment.front-matter.embedded-block.begin.pug
+      embed: scope:source.yaml
+      embed_scope: source.yaml.front-matter.embedded-block.pug
+      escape: '^---'
+      escape_captures:
+        0: comment.front-matter.embedded-block.end.pug
+  
+  # Embedded JavaScript for Pug Sublime Syntax
+
+  embedded_js:
+    - match: '\-'
+      scope: constant.language.embedded-js.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded-js.pug
+      escape: $
+      escape_captures:
+        0: constant.language.embedded-js.end.pug
+    - match: '\='
+      scope: constant.language.embedded-js.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded-js.pug
+      escape: $
+      escape_captures:
+        0: constant.language.embedded-js.end.pug
+  
+  # Embedded HTML for Pug Sublime Syntax
+
+  embedded_html:
+    - include: text.html.basic
+  
+  # Embedded PHP for Pug Sublime Syntax
+
+  embedded_php:
+    - match: '(\<\?(?:php)?)\s*'
+      scope: keyword.control.embedded.php.block.begin.pug
+      embed: scope:source.php
+      embed_scope: source.php.embedded.pug
+      escape: '(\s*\?\>$)'
+      escape_captures:
+        0: keyword.control.embedded.php.block.end.pug
+...

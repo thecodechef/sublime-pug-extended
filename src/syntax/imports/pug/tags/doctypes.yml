@@ -1,0 +1,13 @@
+# Doctypes for Pug Sublime Syntax
+
+  doctypes:
+    - match: '\b(doctype)\b'
+      scope: 'entity.name.tag.doctype.pug'
+      push:
+        - match: '\s*\b(xml|html|traditional|strict|frameset|1\.1|basic|mobile|plist|)\b'
+          scope: keyword.control.tag.doctype.builtins.pug
+        - match: '\s*\b([a-zA-Z0-9_\-]*)\b'
+          scope: keyword.control.tag.doctype.other.pug
+        - include: strings
+        - match: $
+          pop: true

@@ -1,0 +1,13 @@
+
+  # JSDoc Separator for Pug Sublime Syntax
+
+  jsdoc_separator:
+    - match: '(:)'
+      scope: punctuation.separator.mapping.key-value.jsdoc.pug
+      push:
+        - match: ''
+          pop: true
+  
+  jsdoc_value_separator:
+    - match: '(\|)'
+      scope: punctuation.separator.value.jsdoc.pug

@@ -1,0 +1,24 @@
+
+  # Mixin Arguments for Pug Sublime Syntax
+
+  mixin_definition_args:
+    - match: '(?:{{mixin_keyword}}\s*?(\w*))(\()'
+      captures:
+        1: punctuation.section.parens.mixin.definitions.arguments.begin.pug
+      push:
+        - meta_scope: meta.mixin.args.pug
+        - match: '(\))'
+          captures:
+            1: punctuation.section.parens.mixin.definitions.arguments.end.pug
+          pop: true
+
+  mixin_calls_args:
+    - match: '(?:\+(\w*))(\()'
+      captures:
+        1: punctuation.section.parens.mixin.calls.arguments.begin.pug
+      push:
+        - meta_scope: meta.mixin.args.pug
+        - match: '(\))'
+          captures:
+            1: punctuation.section.parens.mixin.calls.arguments.end.pug
+          pop: true

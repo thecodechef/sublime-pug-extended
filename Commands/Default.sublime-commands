@@ -1,0 +1,18 @@
+[
+  {
+    "caption": "Pug Extended: About",
+    "command": "pug_info"
+  },
+  {
+    "caption": "Pug Extended: Changelog",
+    "command": "pug_changes"
+  },
+  {
+    "caption": "Pug Extended: Repo",
+    "command": "pug_repo"
+  },
+  {
+    "caption": "Pug Extended: Issues",
+    "command": "pug_issues"
+  }
+]

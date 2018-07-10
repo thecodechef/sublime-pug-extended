@@ -1,0 +1,57 @@
+/**
+ * Pug Extended - A Updated Pug Syntax with Front-Matter & JSDoc Support
+ * @version v1.0.0
+ * @homepage https://www.github.com/thecodechef/sublime-pug-extended.git
+ * @issues https://www.github.com/thecodechef/sublime-pug-extended/issues
+ */
+[
+  {
+    "scope": "source.pug",
+    "completions": [
+      {
+        "trigger": "include\tInclude Keyword",
+        "contents": "include $1"
+      },
+      {
+        "trigger": "extend\tExtends Keyword",
+        "contents": "extends $1"
+      },
+      {
+        "trigger": "block\tBlock Keyword",
+        "contents": "block $1"
+      },
+      {
+        "trigger": "append\tAppend Keyword",
+        "contents": "append $1"
+      },
+      {
+        "trigger": "prepend\tPrepend Keyword",
+        "contents": "prepend $1"
+      },
+      {
+        "trigger": "mix\tMixin Declaration",
+        "contents": "mixin ${1:mixin-name}(${2:mixin-args})\n\t$3"
+      },
+      {
+        "trigger": "mix\tMixin Call",
+        "contents": "+${1:mixin-name}(${2:mixin-args})"
+      },
+      {
+        "trigger": "if\tIf Keyword",
+        "contents": "if ${1:condition}\n\t$2"
+      },
+      {
+        "trigger": "elseif\tElse If Keyword",
+        "contents": "else if ${1:condition}\n\t$2"
+      },
+      {
+        "trigger": "else\tElse Keyword",
+        "contents": "else\n\t$1"
+      },
+      {
+        "trigger": "attributes\tAttributes Keyword",
+        "contents": "&attributes($1)"
+      }
+    ]
+  }
+]

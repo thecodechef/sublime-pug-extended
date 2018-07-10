@@ -1,0 +1,47 @@
+# Interpolation for Pug Sublime Syntax
+
+  interpolation:
+    - match: '(\$\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.variable.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.variable.end.pug
+    - match: '(\#\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.hash.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.hash.end.pug
+    - match: '(\!\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.unescaped.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.unescaped.end.pug
+    - match: '(\#\[)'
+      captures:
+        1: punctuation.definition.escaped.tag.begin.pug
+      push:
+        - meta_scope: meta.escaped.tag.pug
+        - include: main
+        - match: '(\])'
+          captures:
+            1: punctuation.definition.escaped.tag.end.pug
+          pop: true
+    - match: '(\!\[)'
+      captures:
+        1: punctuation.definition.unescaped.tag.begin.pug
+      push:
+        - meta_scope: meta.unescaped.tag.pug
+        - include: main
+        - match: '(\])'
+          captures:
+            1: punctuation.definition.unescaped.tag.end.pug
+          pop: true

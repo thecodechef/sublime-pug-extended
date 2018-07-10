@@ -1,0 +1,10 @@
+  
+  # Buffered Comments for Pug Sublime Syntax
+  
+  buffered_comments:
+    - match: '(//)'
+      scope: string.comment.buffered.declaration.pug
+      push:
+        - meta_scope: string.comment.buffered.line.pug
+        - match: $
+          pop: true

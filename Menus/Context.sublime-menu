@@ -1,0 +1,40 @@
+[
+  {
+    "caption": "-",
+    "id": "packages"
+  },
+  {
+    "caption": "Packages",
+    "children": [
+      {
+        "id": "pug-extended",
+        "caption": "Pug Extended",
+        "children": [
+          {
+            "caption": "Github Issues",
+            "command": "pug_issues"
+          },
+          {
+            "caption": "Github Repo",
+            "command": "pug_repo"
+          },
+          {
+            "caption": "Changelog",
+            "command": "pug_changes"
+          },
+          {
+            "caption": "-"
+          },
+          {
+            "caption": "About",
+            "command": "pug_info"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "caption": "-",
+    "id": "end"
+  }
+]

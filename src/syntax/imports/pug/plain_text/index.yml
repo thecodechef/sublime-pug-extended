@@ -1,0 +1,3 @@
+# Plain Text for Pug Sublime Syntax
+
+  - import: "./plain_text.yml"

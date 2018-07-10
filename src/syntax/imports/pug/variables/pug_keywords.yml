@@ -1,0 +1,12 @@
+
+  # Pug Keywords for Pug Sublime Syntax
+  
+  mixin_keyword: \b(mixin)\b
+  mixin_attributes_declaration: (\&)(attributes)\b
+  block_keywords: |-
+    \b(extends|block|append|prepend|block (?:append|prepend)|yield)\b
+  conditional_keywords: |-
+    \b(if|else|else if|case|when|default|unless)\b
+  iteration_keywords: |-
+    \b(for|each|while|break|continue)\b
+  include_keyword: \b(include)\b

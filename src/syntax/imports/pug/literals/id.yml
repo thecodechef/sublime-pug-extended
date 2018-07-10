@@ -1,0 +1,11 @@
+# Id Literals for Pug Sublime Syntax
+
+  id_literals:
+    - match: '(#)([a-zA-Z0-9_\-]*)\b'
+      captures:
+        1: keyword.control.literal.id.declaration.pug
+        2: keyword.control.literal.id.name.pug
+      push:
+        - include: tag_attribute_parens
+        - match: $
+          pop: true

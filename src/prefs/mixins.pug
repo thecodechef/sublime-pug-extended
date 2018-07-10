@@ -1,0 +1,76 @@
+
+//- Block Mixins
+
+//- @mixin: plist
+//- @type: block
+//- @param: version { @type: string }
+mixin plist(version="1.0")
+  doctype xml
+  = '\n'
+  doctype plist
+  plist(version=version)
+    if block
+      block
+
+//- @mixin: dict
+//- @type: block
+//- @param: dictName { @type: string }
+mixin dict(dictName="")
+  if dictName
+    key= dictName
+    dict()
+      if block
+        block
+  else
+    dict()
+      if block
+        block
+
+//- @mixin: array
+//- @type: block
+//- @param: arrayName { @type: string }
+mixin array(arrayName="")
+  if arrayName
+    key= arrayName
+    array()
+      if block
+        block
+  else
+    array()
+      if block
+        block
+
+
+//- Inline Mixins
+
+//- @mixin: name
+//- @type: inline
+//- @param: name { @type: string }
+mixin name(name="")
+  key name
+  string= name
+
+//- @mixin: scope
+//- @type: inline
+//- @param: scope { @type: string }
+mixin scope(scope="")
+  key scope
+  string= scope
+
+//- @mixin: key
+//- @type: inline | block
+//- @param key { @type: string }
+//- @param string { @type: string }
+mixin key(key, string)
+  if key && string
+    key= key
+    string= string
+  if key && !string && !block
+    key= key
+    string
+  if block
+    if key && !string
+      key=key
+      string
+        block
+  

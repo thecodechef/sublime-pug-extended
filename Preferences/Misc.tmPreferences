@@ -1,0 +1,38 @@
+<!--
+* Pug Extended - A Updated Pug Syntax with Front-Matter & JSDoc Support
+* @author Jeremy Bolding
+* @version v1.0.0
+* @homepage https://www.github.com/thecodechef/sublime-pug-extended.git
+* @issues https://www.github.com/thecodechef/sublime-pug-extended/issues
+-->
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>name</key>
+    <string>Misc</string>
+    <key>scope</key>
+    <string>source.pug</string>
+    <key>settings</key>
+    <dict>
+      <key>decreaseIndentPattern</key>
+      <string>^s*(-s+)?(else).*$</string>
+      <key>increaseIndentPattern</key>
+      <string>
+        (?x)
+         ^\s*(                                                  # start with any whitespace
+         ([\w#.-]+(\(.*?\))?                                  # first tag
+         (:\s*[\w#.-]+(\(.*?\))?)*                           # additional tags
+         \.?$)                                               # end tag with . or end of line
+         |(:[a-z]\w*($|\())                                   # filters
+         |(//-?$)                                             # multiline unbuffered comments
+         |(//?$)                                              # multiline buffered comments
+         |(-\s+(if|else|while)(\s+|$))                        # embedded js control flow
+         |((for|if|else if|else|each|until|while|unless|case|when|block|append|prepend)(\s+|$))               # pug block first-class
+        )
+      </string>
+      <key>disableIndentNextLinePattern</key>
+      <string></string>
+    </dict>
+  </dict>
+</plist>

@@ -1,0 +1,10 @@
+# Keywords for Pug Sublime Syntax
+
+  # - import: "./builtins.yml"
+  # - import: "./other.yml"
+  # - import: "./block.yml"
+  # - import: "./block_append.yml"
+  # - import: "./block_prepend.yml"
+  # - import: "./extends.yml"
+  - import: "./mixin.yml"
+  - import: "./include.yml"

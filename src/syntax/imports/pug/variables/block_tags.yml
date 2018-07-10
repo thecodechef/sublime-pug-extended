@@ -1,0 +1,16 @@
+  
+  # Block Tag Variable for Pug Sublime Syntax
+  
+  block_tags: |-
+    (?x)\b(
+      a     |
+      body  |
+      div   |
+      h([1-6]+|group)|
+      head  |
+      html  |
+      li    |
+      ol    |
+      title |
+      ul
+    )\b

@@ -1,0 +1,14 @@
+-
+  # JSDoc Completions for Pug Sublime Syntax
+
+  scope: source.pug - meta.comment.pug
+  completions:
+    - {trigger: "@abstract\t[JSDoc]: Abstract Tag", contents: "@abstract:${1: }"}
+    - {trigger: "@access\t[JSDoc]: Access Tag", contents: "@access:${1: }"}
+    - {trigger: "@alias\t[JSDoc]: Alias Tag", contents: "@alias:${1: }"}
+    - {trigger: "@arg\t[JSDoc]: Arg Tag", contents: "@arg:${1: }"}
+    - {trigger: "@arg\t[JSDoc]: Argument Tag", contents: "@argument:${1: }"}
+    - {trigger: "@async\t[JSDoc]: Async Tag", contents: "@async:${1: }"}
+    - {trigger: "@augments\t[JSDoc]: Augments Tag", contents: "@abstract:${1: }"}
+    - {trigger: "@author\t[JSDoc]: Author Tag", contents: "@author:${1: }"}
+    - {trigger: "@borrows\t[JSDoc]: Borrows Tag", contents: "@borrows:${1: }"}

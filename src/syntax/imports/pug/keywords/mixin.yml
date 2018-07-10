@@ -1,0 +1,23 @@
+
+  # Mixin Keyword for Pug Sublime Syntax
+
+  mixin_keyword:
+    - match: '({{mixin_keyword}})'
+      captures: 
+        1: keyword.control.mixin.declaration.pug
+      push:
+        - meta_scope: meta.mixin.pug
+        - match: $
+          pop: true
+        - include: mixin_definitions
+        - include: mixin_definitions_args
+    
+    - match: '(\+)'
+      captures: 
+        1: keyword.control.mixin.declaration.pug
+      push:
+        - meta_scope: meta.mixin.pug
+        - match: $
+          pop: true
+        - include: mixin_calls
+        - include: mixin_calls_args

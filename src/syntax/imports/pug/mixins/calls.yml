@@ -1,0 +1,7 @@
+
+  # Mixin Calls for Pug Sublime Syntax
+
+  mixin_calls:
+    - match: '(?:\+)(\w*)'
+      captures:
+        1: entity.name.function.mixin.calls.name.pug

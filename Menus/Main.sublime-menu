@@ -1,0 +1,43 @@
+[
+  {
+    "id": "preferences",
+    "children": [
+      {
+        "caption": "Package Settings",
+        "id": "package-settings",
+        "children": [
+          {
+            "id": "pug-extended",
+            "caption": "Pug Extended",
+            "children": [
+              {
+                "caption": "-",
+                "id": "github"
+              },
+              {
+                "caption": "Github Issues",
+                "command": "pug_issues"
+              },
+              {
+                "caption": "Github Repo",
+                "command": "pug_repo"
+              },
+              {
+                "caption": "-",
+                "id": "info"
+              },
+              {
+                "caption": "About",
+                "command": "pug_info"
+              },
+              {
+                "caption": "Changelog",
+                "command": "pug_changes"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

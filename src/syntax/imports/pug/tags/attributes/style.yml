@@ -1,0 +1,11 @@
+
+  # Style Attribute for Pug Sublime Syntax
+
+  style_attribute:
+    - match: '\b(style)\b'
+      captures:
+        1: storage.type.tag.attribute.style.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true

@@ -1,0 +1,18 @@
+# Ignore these Sublime Files
+
+*.sublime-projects
+*.sublime-workspaces
+*.sublime-package
+
+# Ignore these Files
+
+.env
+jstransformers.txt
+test-transformer-list.js
+.DS_Store
+*.lock
+package-lock.json
+
+# Ignore these folders
+
+node_modules/

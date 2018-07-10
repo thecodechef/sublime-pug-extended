@@ -1,0 +1,5 @@
+  
+  # Embedded HTML for Pug Sublime Syntax
+
+  embedded_html:
+    - include: text.html.basic

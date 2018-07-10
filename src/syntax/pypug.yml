@@ -1,0 +1,11 @@
+%YAML 1.2
+---
+name: PyPug
+file_extensions:
+  - pypug
+scope: source.pypug
+- import: "./imports/pypug/variables.yml"
+
+contexts:
+  - import: "./imports/pypug/main.yml"
+...

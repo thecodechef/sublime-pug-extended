@@ -1,0 +1,12 @@
+
+  # JSDoc Braces for Pug Sublime Syntax
+
+  jsdoc_parens:
+    - match: '(\{)'
+      scope: punctuation.section.braces.jsdoc.inline-statement.begin.pug
+      push:
+        - meta_scope: meta.jsdoc.inline-statement.pug
+        - include: jsdoc_keywords
+        - match: '(\})'
+          scope: punctuation.section.braces.jsdoc.inline-statement.end.pug
+          pop: true

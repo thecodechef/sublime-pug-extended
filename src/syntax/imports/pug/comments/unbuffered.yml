@@ -1,0 +1,12 @@
+  
+  # Unbuffered Comments for Pug Sublime Syntax
+  
+  unbuffered_comments:
+    - match: '(//-)'
+      scope: comment.unbuffered.declaration.pug
+      push:
+        - meta_scope: meta.comment.pug
+        - meta_content_scope: comment.unbuffered.block.pug
+        - include: jsdoc
+        - match: $
+          pop: true

@@ -1,0 +1,27 @@
+# Strings for Pug Sublime Syntax
+  
+  strings:
+    - include: double_quoted_strings
+    - include: single_quoted_strings
+  
+  double_quoted_strings:
+    - match: (\")
+      captures:
+        1: punctuation.definition.string.begin.pug 
+      push:
+        - meta_content_scope: string.quoted.double.pug
+        - match: (\")
+          captures:
+            1: punctuation.definition.string.end.pug
+          pop: true
+  
+  single_quoted_string:
+    - match: (\')
+      captures:
+        1: punctuation.definition.string.begin.pug 
+      push:
+        - meta_content_scope: string.quoted.single.pug
+        - match: (\')
+          captures:
+            1: punctuation.definition.string.end.pug
+          pop: true

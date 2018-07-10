@@ -1,0 +1,19 @@
+pulls:
+  daysUntilLock: 40
+  exemptLabels: []
+  lockLabel: is-locked
+  lockComment: >
+    This thread has been automatically locked since there has not been
+    any recent activity after it was closed. Please open a new issue for
+    related bugs.
+  setLockReason: true
+
+issues:
+  daysUntilLock: 40
+  exemptLabels: []
+  lockLabel: is-locked
+  lockComment: >
+    This thread has been automatically locked since there has not been
+    any recent activity after it was closed. Please open a new issue for
+    related bugs.
+  setLockReason: true

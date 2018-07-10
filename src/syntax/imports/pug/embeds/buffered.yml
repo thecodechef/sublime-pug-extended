@@ -1,0 +1,20 @@
+
+  # Escaped Buffered Embedded JavaScript Code
+
+  - match: '\s*(\=)\s*'
+    scope: storage.type.buffered.code.escaped.begin.pug
+    embed: scope:source.js
+    embed_scope: source.js.buffered.embedded.escaped.pug
+    escape: $
+    escape_captures:
+      0: storage.type.buffered.code.escaped.end.pug
+
+  # Unescaped Buffered Embedded JavaScript Code
+  
+  - match: '\s*(\!\=)\s*'
+    scope: storage.type.buffered.code.unescaped.begin.pug
+    embed: scope:source.js
+    embed_scope: source.js.buffered.embedded.unescaped.pug
+    escape: $
+    escape_captures:
+      0: storage.type.buffered.code.unescaped.end.pug

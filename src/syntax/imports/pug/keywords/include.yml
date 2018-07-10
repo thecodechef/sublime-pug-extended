@@ -1,0 +1,12 @@
+
+  # Include Keyword for Pug Sublime Syntax
+  
+  include_keyword:
+    - match: '{{include_keyword}}'
+      scope: 'keyword.control.include.declaration.pug'
+      push:
+        - meta_scope: meta.path.includes.pug
+        - meta_content_scope: string.unqouted.includes-string.pug
+        - match: $
+          pop: true
+        - include: filters

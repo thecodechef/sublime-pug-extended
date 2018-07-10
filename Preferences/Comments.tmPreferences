@@ -1,0 +1,29 @@
+<!--
+* Pug Extended - A Updated Pug Syntax with Front-Matter & JSDoc Support
+* @author Jeremy Bolding
+* @version v1.0.0
+* @homepage https://www.github.com/thecodechef/sublime-pug-extended.git
+* @issues https://www.github.com/thecodechef/sublime-pug-extended/issues
+-->
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <key>name</key>
+    <string>Comments</string>
+    <key>scope</key>
+    <string>source.pug</string>
+    <key>settings</key>
+    <dict>
+      <key>shellVariables</key>
+      <array>
+        <dict>
+          <key>name</key>
+          <string>TM_COMMENT_START</string>
+          <key>value</key>
+          <string>//-</string>
+        </dict>
+      </array>
+    </dict>
+  </dict>
+</plist>

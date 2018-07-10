@@ -1,0 +1,7 @@
+
+  # Mixin Definitions for Pug Sublime Syntax
+
+  mixin_definitions:
+    - match: '(?:{{mixin_keyword}})\s*?(\w*)'
+      captures:
+        1: entity.name.function.mixin.definition.name.pug

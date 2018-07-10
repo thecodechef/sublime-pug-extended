@@ -1,0 +1,11 @@
+  
+  # Embedded PHP for Pug Sublime Syntax
+
+  embedded_php:
+    - match: '(\<\?(?:php)?)\s*'
+      scope: keyword.control.embedded.php.block.begin.pug
+      embed: scope:source.php
+      embed_scope: source.php.embedded.pug
+      escape: '(\s*\?\>$)'
+      escape_captures:
+        0: keyword.control.embedded.php.block.end.pug

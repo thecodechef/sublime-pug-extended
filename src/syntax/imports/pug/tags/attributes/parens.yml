@@ -1,0 +1,10 @@
+# Tag Attribute Brackets for Pug Sublime Syntax
+
+  tag_attribute_parens:
+    - match: '(?:{{block_tags}}|{{inline_tags}}|{{form_tags}})\('
+      scope: punctuation.section.parens.begin.pug
+      push:
+        - meta_scope: meta.tag.attributes.pug
+        - match: '\)$'
+          scope: punctuation.section.parens.end.pug
+          pop: true

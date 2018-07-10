@@ -1,0 +1,75 @@
+name: Pug Extended
+author: Jeremy Bolding
+description: |-
+  A Updated Pug Syntax with Front-Matter & JSDoc Support
+
+builds:
+  pug:
+    name: Pug
+  ext: .sublime-build
+
+commands:
+  default:
+    name: Default
+  ext: .sublime-commands
+
+menus:
+  main:
+    name: Main
+  
+  context:
+    name: Context
+  
+  ext: .sublime-menu
+
+prefs:
+  comments:
+    name: Comments
+  
+  misc:
+    name: Misc
+    decreasePattern: |-
+      ^\s*(-\s+)?(else)\b.*$
+    increasePattern: |-
+      (?x)
+      ^\s*(                                                  # start with any whitespace
+        ([\w#.-]+(\(.*?\))?                                  # first tag
+         (:\s*[\w#.-]+(\(.*?\))?)*                           # additional tags
+         \.?$)                                               # end tag with . or end of line
+        |(:[a-z]\w*($|\())                                   # filters
+        |(//-?$)                                             # multiline unbuffered comments
+        |(//?$)                                              # multiline buffered comments
+        |(-\s+(if|else|while)(\s+|$))                        # embedded js control flow
+        |((for|if|else if|else|each|until|while|unless|case
+           |when|block|append|prepend)(\s+|$))               # pug block first-class
+      )
+  nextLinePattern: ''
+  ext: .tmPreferences
+
+completions:
+  
+  tags:
+    name: Pug Tag Completions
+  
+  attributes:
+    name: Pug Attributes Completions
+  
+  keywords:
+    name: Pug Keywords Completions
+  
+  filters:
+    name: Pug Filters Completions
+  
+  jsdoc:
+    name: Pug JSDoc Completions
+  
+  ext: .sublime-completions
+
+syntax:
+  pug:
+    name: Pug
+  
+  pypug:
+    name: PyPug
+  
+  ext: .sublime-syntax

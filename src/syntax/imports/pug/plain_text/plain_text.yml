@@ -1,0 +1,12 @@
+  
+  # Plain Text for Pug Sublime Syntax
+  
+  plain_text:
+    - match: '\s*(\|)\s*'
+      scope: keyword.operator.assignment.pug
+      push:
+        - match: (\w*)
+          scope: string.unquoted.plain-text.pug
+        - include: strings
+        - match: $
+          pop: true

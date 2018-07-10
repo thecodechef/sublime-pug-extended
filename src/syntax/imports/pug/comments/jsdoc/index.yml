@@ -1,0 +1,10 @@
+  
+  # JSDoc for Pug Sublime Syntax
+
+  jsdoc:
+    - include: jsdoc_keywords
+
+  - import: "./keywords.yml"
+  - import: "./separator.yml"
+  - import: "./values.yml"
+  - import: "./parens.yml"

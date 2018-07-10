@@ -1,0 +1,12 @@
+
+# Punctuation for Pug Sublime Syntax
+
+  punctuations:
+    - include: rest_arguments_punctuation
+
+  rest_arguments_punctuation:
+    - match: '\.\.\.'
+      scope: punctuation.definition.rest-args.pug
+      push:
+        - match: ''
+          pop: true

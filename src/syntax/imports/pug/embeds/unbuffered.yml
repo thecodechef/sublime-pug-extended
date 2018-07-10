@@ -1,0 +1,10 @@
+
+  # Escaped UnBuffered Embedded JavaScript Code
+
+  - match: '\s*(\-)\s*'
+    scope: storage.type.unbuffered.code.escaped.begin.pug
+    embed: scope:source.js
+    embed_scope: source.js.unbuffered.embedded.escaped.pug
+    escape: $
+    escape_captures:
+      0: storage.type.unbuffered.code.escaped.end.pug

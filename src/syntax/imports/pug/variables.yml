@@ -1,0 +1,10 @@
+
+# Variables for Pug Sublime Syntax
+
+variables:
+  - import: "./variables/block_tags.yml"
+  - import: "./variables/inline_tags.yml"
+  - import: "./variables/form_tags.yml"
+  - import: "./variables/event_attributes.yml"
+  - import: "./variables/jsdoc_keywords.yml"
+  - import: "./variables/pug_keywords.yml"

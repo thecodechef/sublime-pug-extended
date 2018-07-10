@@ -1,0 +1,15 @@
+# Tags for Pug Sublime Syntax
+
+  - import: "./doctypes.yml"
+  - import: "./block.yml"
+  - import: "./inline.yml"
+  - import: "./form.yml"
+
+# Attributes for Pug Sublime Syntax
+  
+  - import: "./attributes/parens.yml"
+  - import: "./attributes/id.yml"
+  - import: "./attributes/class.yml"
+  - import: "./attributes/style.yml"
+  - import: "./attributes/event.yml"
+  - import: "./attributes/generic.yml"

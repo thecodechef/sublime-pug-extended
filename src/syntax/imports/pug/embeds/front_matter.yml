@@ -1,0 +1,11 @@
+  
+  # Embedded Front Matter for Pug
+
+  embedded_front_matter:
+    - match: '^---$'
+      scope: comment.front-matter.embedded-block.begin.pug
+      embed: scope:source.yaml
+      embed_scope: source.yaml.front-matter.embedded-block.pug
+      escape: '^---'
+      escape_captures:
+        0: comment.front-matter.embedded-block.end.pug

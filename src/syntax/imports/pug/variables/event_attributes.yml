@@ -1,0 +1,7 @@
+
+  # Event Attributes Variable for Pug Sublime Syntax
+  
+  event_attributes: |-
+    (?x)\bon(
+      click|mousemove
+    )\b

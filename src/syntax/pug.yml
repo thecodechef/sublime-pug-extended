@@ -1,0 +1,22 @@
+%YAML 1.2
+---
+name: Pug
+file_extensions:
+  - pug
+scope: source.pug
+- import: "./imports/pug/variables.yml"
+
+contexts:
+  - import: "./imports/pug/main.yml"
+  - import: "./imports/pug/comments/index.yml"
+  - import: "./imports/pug/tags/index.yml"
+  - import: "./imports/pug/keywords/index.yml"
+  - import: "./imports/pug/strings/index.yml"
+  - import: "./imports/pug/filters/index.yml"
+  - import: "./imports/pug/literals/index.yml"
+  - import: "./imports/pug/plain_text/index.yml"
+  - import: "./imports/pug/punctuations/index.yml"
+  - import: "./imports/pug/interpolation/index.yml"
+  - import: "./imports/pug/mixins/index.yml"
+  - import: "./imports/pug/embeds/index.yml"
+...

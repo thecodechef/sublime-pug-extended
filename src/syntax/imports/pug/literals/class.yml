@@ -1,0 +1,11 @@
+# Class Literals for Pug Sublime Syntax
+
+  class_literals:
+    - match: '(\.)([a-zA-Z0-9_\-]*)\b'
+      captures:
+        1: keyword.control.literal.class.declaration.pug
+        2: keyword.control.literal.class.name.pug
+      push:
+        - include: tag_attribute_parens
+        - match: $
+          pop: true

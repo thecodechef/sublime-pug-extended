@@ -1,0 +1,11 @@
+
+  # Generic Attributes for Pug Sublime Syntax
+
+  generic_attribute:
+    - match: '\b(data-[a-z\-]*|aria-[a-z\-]*|[a-z\-]*)\b'
+      captures:
+        1: storage.type.tag.attribute.generic.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true

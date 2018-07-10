@@ -1,0 +1,10 @@
+
+  # JSDoc Values for Pug Sublime Syntax
+
+  jsdoc_values:
+    - match: '(?:\s+)\b([a-zA-Z0-9_\-]*)\b\s*'
+      scope: string.unquoted.jsdoc.value.pug
+      push:
+        - include: jsdoc_value_separator
+        - match: ''
+          pop: true

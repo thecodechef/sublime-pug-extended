@@ -1,0 +1,11 @@
+# Form Tags for Pug Sublime Syntax
+
+  form_tags:
+    - match: '{{form_tags}}'
+      scope: entity.name.tag.structure.form.pug
+      push:
+        - include: class_literals
+        - include: id_literals
+        - include: tag_attribute_parens
+        - match: $
+          pop: true

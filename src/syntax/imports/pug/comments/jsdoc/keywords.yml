@@ -1,0 +1,26 @@
+  
+  # JSDoc Keywords for Pug Sublime Syntax
+  
+  jsdoc_keywords:
+    - match: '(@)\b({{jsdoc_keywords_builtins}})\b'
+      captures:
+        1: keyword.control.jsdoc.keywords.builtins.declaration.pug
+        2: keyword.control.jsdoc.keywords.builtins.word.pug
+      push:
+        - meta_scope: meta.jsdoc.keyword.pug
+        - include: jsdoc_separator
+        - include: jsdoc_values
+        - include: jsdoc_parens
+        - match: ''
+          pop: true
+    - match: '(@)\b({{jsdoc_keywords_other}})\b'
+      captures:
+        1: keyword.control.jsdoc.keywords.other.declaration.pug
+        2: keyword.control.jsdoc.keywords.other.word.pug
+      push:
+        - meta_scope: meta.jsdoc.keyword.pug
+        - include: jsdoc_separator
+        - include: jsdoc_values
+        - include: jsdoc_parens
+        - match: ''
+          pop: true

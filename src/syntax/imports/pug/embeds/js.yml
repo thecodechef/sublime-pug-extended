@@ -1,0 +1,18 @@
+  
+  # Embedded JavaScript for Pug Sublime Syntax
+
+  embedded_js:
+    - match: '\-'
+      scope: constant.language.embedded-js.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded-js.pug
+      escape: $
+      escape_captures:
+        0: constant.language.embedded-js.end.pug
+    - match: '\='
+      scope: constant.language.embedded-js.begin.pug
+      embed: scope:source.js
+      embed_scope: source.js.embedded-js.pug
+      escape: $
+      escape_captures:
+        0: constant.language.embedded-js.end.pug

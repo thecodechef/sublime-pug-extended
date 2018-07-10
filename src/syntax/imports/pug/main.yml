@@ -1,0 +1,22 @@
+  
+  # Main Context for Pug Sublime Syntax
+  
+  main:
+    - include: unbuffered_comments
+    - include: buffered_comments
+    - include: doctypes
+    - include: block_tags
+    - include: inline_tags
+    - include: form_tags
+    - include: mixin_keyword
+    - include: include_keyword
+    - include: filters
+    - include: class_literals
+    - include: id_literals
+    - include: plain_text
+    - include: punctuations
+    - include: interpolation
+    - include: embedded_front_matter
+    - include: embedded_js
+    - include: embedded_php
+    - include: embedded_html

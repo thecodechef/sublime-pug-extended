@@ -1,0 +1,4 @@
+# Literals for Pug Sublime Syntax
+
+  - import: "./class.yml"
+  - import: "./id.yml"

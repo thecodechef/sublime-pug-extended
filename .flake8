@@ -1,0 +1,9 @@
+# Flake8 Python Linting Options
+
+# Install flake8 to use this file
+# pip install flake8
+# flake --config=./.flake8 path/to/your/py/files
+
+[flake8]
+  ignore=F401,F403
+  format=%(path)s::%(row)d,%(col)d::%(code)s::%(text)s

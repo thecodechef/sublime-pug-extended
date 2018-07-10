@@ -1,0 +1,45 @@
+/**
+ * Pug Extended - A Updated Pug Syntax with Front-Matter & JSDoc Support
+ * @version v1.0.0
+ * @homepage https://www.github.com/thecodechef/sublime-pug-extended.git
+ * @issues https://www.github.com/thecodechef/sublime-pug-extended/issues
+ */
+[
+  {
+    "scope": "source.pug - entity.name.tag.pug",
+    "completions": [
+      {
+        "trigger": "a\tAnchor Tag",
+        "contents": "a(href='$1')$2"
+      },
+      {
+        "trigger": "ab\tAbbreviation Tag",
+        "contents": "abbr($1)$2"
+      },
+      {
+        "trigger": "ac\tAcronym Tag",
+        "contents": "acronym($1)$2"
+      },
+      {
+        "trigger": "ad\tAddress Tag",
+        "contents": "address($1)$2"
+      },
+      {
+        "trigger": "ap\tApplet Tag",
+        "contents": "applet($1)$2"
+      },
+      {
+        "trigger": "ar\tArticle Tag",
+        "contents": "article($1)$2"
+      },
+      {
+        "trigger": "as\tAside Tag",
+        "contents": "aside($1)$2"
+      },
+      {
+        "trigger": "au\tAudio Tag",
+        "contents": "audio($1)$2"
+      }
+    ]
+  }
+]

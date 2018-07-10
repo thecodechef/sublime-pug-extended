@@ -1,0 +1,11 @@
+
+  # Class Attribute for Pug Sublime Syntax
+
+  class_attribute:
+    - match: '\b(class)\b'
+      captures:
+        1: storage.type.tag.attribute.class.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true

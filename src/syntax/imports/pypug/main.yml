@@ -1,0 +1,48 @@
+  
+  # Main Context for PyPug Sublime Syntax
+
+  main:
+    - match: '(\$\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.variable.begin.pypug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pypug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.variable.end.pypug
+    - match: '(\#\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.hash.begin.pypug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pypug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.hash.end.pypug
+    - match: '(\!\{)'
+      captures:
+        1: punctuation.definition.embedded.js.tag.unescaped.begin.pypug
+      embed: scope:source.js
+      embed_scope: source.js.embedded.js.pypug
+      escape: (\})
+      escape_captures:
+        1: punctuation.definition.embedded.js.tag.unescaped.end.pypug
+    - match: '(\#\[)'
+      captures:
+        1: punctuation.definition.escaped.tag.begin.pypug
+      push:
+        - meta_scope: meta.escaped.tag.pypug
+        - include: scope:source.pug
+        - match: '(\])'
+          captures:
+            1: punctuation.definition.escaped.tag.end.pypug
+          pop: true
+    - match: '(\!\[)'
+      captures:
+        1: punctuation.definition.unescaped.tag.begin.pypug
+      push:
+        - meta_scope: meta.unescaped.tag.pypug
+        - include: scope:source.pug
+        - match: '(\])'
+          captures:
+            1: punctuation.definition.unescaped.tag.end.pypug
+          pop: true

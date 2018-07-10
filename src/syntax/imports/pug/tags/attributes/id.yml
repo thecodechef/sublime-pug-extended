@@ -1,0 +1,11 @@
+
+  # Id Attribute for Pug Sublime Syntax
+
+  id_attribute:
+    - match: '\b(id)\b'
+      captures:
+        1: storage.type.tag.attribute.id.pug
+      push:
+        - meta_scope: meta.tag.attribute.pug
+        - match: '$'
+          pop: true
