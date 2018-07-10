@@ -78,7 +78,6 @@ ___
 	<!-- Patreon Button -->
 	<a href="https://www.patreon.com">
 		<img src="./assets/patreon.png" alt="Patreon Donation">
-		<span>Patreon</span>
   </a>
 </p>
 
