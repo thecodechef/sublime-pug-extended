@@ -24,7 +24,7 @@
       "contents": "autoprefixer"
     },
     {
-      "trigger": "babel\tBabelJS Filter",
+      "trigger": "babel\tBabel Filter",
       "contents": "babel"
     },
     {
@@ -44,7 +44,7 @@
       "contents": "browserify"
     },
     {
-      "trigger": "buble\tBubleJS Filter",
+      "trigger": "buble\tBuble Filter",
       "contents": "buble"
     },
     {
@@ -56,7 +56,7 @@
       "contents": "cdata-css"
     },
     {
-      "trigger": "cdata-js\tCdataJS Filter",
+      "trigger": "cdata-js\tCdataJs Filter",
       "contents": "cdata-js"
     },
     {
@@ -68,11 +68,11 @@
       "contents": "coffee-script"
     },
     {
-      "trigger": "coffeecup\tCoffeeCup Filter",
+      "trigger": "coffeecup\tCoffeecup Filter",
       "contents": "coffeecup"
     },
     {
-      "trigger": "coffeekup\tCoffeeKup Filter",
+      "trigger": "coffeekup\tCoffeekup Filter",
       "contents": "coffeekup"
     },
     {
@@ -112,8 +112,8 @@
       "contents": "csso"
     },
     {
-      "trigger": "decaffinate\tDecaffinate Filter",
-      "contents": "decaffinate"
+      "trigger": "decaffeinate\tDecaffeinate Filter",
+      "contents": "decaffeinate"
     },
     {
       "trigger": "dot\tDot Filter",
@@ -152,11 +152,11 @@
       "contents": "envy-json"
     },
     {
-      "trigger": "es6-template\tES6Template Filter",
+      "trigger": "es6-template\tEs6 Template Filter",
       "contents": "es6-template"
     },
     {
-      "trigger": "es6-template-strings\tES6TemplateStrings Filter",
+      "trigger": "es6-template-strings\tEs6 Template Strings Filter",
       "contents": "es6-template-strings"
     },
     {
@@ -164,11 +164,11 @@
       "contents": "escape-html"
     },
     {
-      "trigger": "esformatter\tESformatter Filter",
+      "trigger": "esformatter\tEsformatter Filter",
       "contents": "esformatter"
     },
     {
-      "trigger": "esnext\tEsNext Filter",
+      "trigger": "esnext\tEsnext Filter",
       "contents": "esnext"
     },
     {
@@ -178,6 +178,478 @@
     {
       "trigger": "function\tFunction Filter",
       "contents": "function"
+    },
+    {
+      "trigger": "gotpl\tGotpl Filter",
+      "contents": "gotpl"
+    },
+    {
+      "trigger": "gray-matter\tGrayMatter Filter",
+      "contents": "gray-matter"
+    },
+    {
+      "trigger": "haml\tHaml Filter",
+      "contents": "haml"
+    },
+    {
+      "trigger": "haml-coffee\tHamlCoffee Filter",
+      "contents": "haml-coffee"
+    },
+    {
+      "trigger": "hamlet\tHamlet Filter",
+      "contents": "hamlet"
+    },
+    {
+      "trigger": "hamljs\tHamljs Filter",
+      "contents": "hamljs"
+    },
+    {
+      "trigger": "handlebars\tHandlebars Filter",
+      "contents": "handlebars"
+    },
+    {
+      "trigger": "highlight\tHighlight Filter",
+      "contents": "highlight"
+    },
+    {
+      "trigger": "hjson\tHjson Filter",
+      "contents": "hjson"
+    },
+    {
+      "trigger": "hogan\tHogan Filter",
+      "contents": "hogan"
+    },
+    {
+      "trigger": "html-beautify\tHtmlBeautify Filter",
+      "contents": "html-beautify"
+    },
+    {
+      "trigger": "html-minifier\tHtmlMinifier Filter",
+      "contents": "html-minifier"
+    },
+    {
+      "trigger": "html2jade\tHtml2 Jade Filter",
+      "contents": "html2jade"
+    },
+    {
+      "trigger": "htmling\tHtmling Filter",
+      "contents": "htmling"
+    },
+    {
+      "trigger": "i-template\tITemplate Filter",
+      "contents": "i-template"
+    },
+    {
+      "trigger": "iced-coffee-script\tIcedCoffee Script Filter",
+      "contents": "iced-coffee-script"
+    },
+    {
+      "trigger": "imba\tImba Filter",
+      "contents": "imba"
+    },
+    {
+      "trigger": "ini\tIni Filter",
+      "contents": "ini"
+    },
+    {
+      "trigger": "j140\tJ140 Filter",
+      "contents": "j140"
+    },
+    {
+      "trigger": "jade\tJade Filter",
+      "contents": "jade"
+    },
+    {
+      "trigger": "jade-jekyll\tJadeJekyll Filter",
+      "contents": "jade-jekyll"
+    },
+    {
+      "trigger": "jazz\tJazz Filter",
+      "contents": "jazz"
+    },
+    {
+      "trigger": "jqtpl\tJqtpl Filter",
+      "contents": "jqtpl"
+    },
+    {
+      "trigger": "js-beautify\tJsBeautify Filter",
+      "contents": "js-beautify"
+    },
+    {
+      "trigger": "jscss\tJscss Filter",
+      "contents": "jscss"
+    },
+    {
+      "trigger": "jscss-lite\tJscssLite Filter",
+      "contents": "jscss-lite"
+    },
+    {
+      "trigger": "json\tJson Filter",
+      "contents": "json"
+    },
+    {
+      "trigger": "jsrender\tJsrender Filter",
+      "contents": "jsrender"
+    },
+    {
+      "trigger": "jst\tJst Filter",
+      "contents": "jst"
+    },
+    {
+      "trigger": "jstransformer\tJstransformer Filter",
+      "contents": "jstransformer"
+    },
+    {
+      "trigger": "jsx\tJsx Filter",
+      "contents": "jsx"
+    },
+    {
+      "trigger": "just\tJust Filter",
+      "contents": "just"
+    },
+    {
+      "trigger": "katex\tKatex Filter",
+      "contents": "katex"
+    },
+    {
+      "trigger": "lebab\tLebab Filter",
+      "contents": "lebab"
+    },
+    {
+      "trigger": "less\tLess Filter",
+      "contents": "less"
+    },
+    {
+      "trigger": "liquid\tLiquid Filter",
+      "contents": "liquid"
+    },
+    {
+      "trigger": "liquor\tLiquor Filter",
+      "contents": "liquor"
+    },
+    {
+      "trigger": "livescript\tLivescript Filter",
+      "contents": "livescript"
+    },
+    {
+      "trigger": "lodash\tLodash Filter",
+      "contents": "lodash"
+    },
+    {
+      "trigger": "markdown\tMarkdown Filter",
+      "contents": "markdown"
+    },
+    {
+      "trigger": "markdown-it\tMarkdownIt Filter",
+      "contents": "markdown-it"
+    },
+    {
+      "trigger": "markdown-yml\tMarkdownYml Filter",
+      "contents": "markdown-yml"
+    },
+    {
+      "trigger": "marked\tMarked Filter",
+      "contents": "marked"
+    },
+    {
+      "trigger": "marko\tMarko Filter",
+      "contents": "marko"
+    },
+    {
+      "trigger": "marky-markdown\tMarkyMarkdown Filter",
+      "contents": "marky-markdown"
+    },
+    {
+      "trigger": "mathjax\tMathjax Filter",
+      "contents": "mathjax"
+    },
+    {
+      "trigger": "mdast\tMdast Filter",
+      "contents": "mdast"
+    },
+    {
+      "trigger": "megamark\tMegamark Filter",
+      "contents": "megamark"
+    },
+    {
+      "trigger": "microtemplate\tMicrotemplate Filter",
+      "contents": "microtemplate"
+    },
+    {
+      "trigger": "mini-handlebars\tMiniHandlebars Filter",
+      "contents": "mini-handlebars"
+    },
+    {
+      "trigger": "mjml\tMjml Filter",
+      "contents": "mjml"
+    },
+    {
+      "trigger": "mmd\tMmd Filter",
+      "contents": "mmd"
+    },
+    {
+      "trigger": "mold\tMold Filter",
+      "contents": "mold"
+    },
+    {
+      "trigger": "mote\tMote Filter",
+      "contents": "mote"
+    },
+    {
+      "trigger": "move\tMove Filter",
+      "contents": "move"
+    },
+    {
+      "trigger": "mustache\tMustache Filter",
+      "contents": "mustache"
+    },
+    {
+      "trigger": "myth\tMyth Filter",
+      "contents": "myth"
+    },
+    {
+      "trigger": "node-twig\tNodeTwig Filter",
+      "contents": "node-twig"
+    },
+    {
+      "trigger": "nunjucks\tNunjucks Filter",
+      "contents": "nunjucks"
+    },
+    {
+      "trigger": "nunjucks-node\tNunjucksNode Filter",
+      "contents": "nunjucks-node"
+    },
+    {
+      "trigger": "octet\tOctet Filter",
+      "contents": "octet"
+    },
+    {
+      "trigger": "opalcss\tOpalcss Filter",
+      "contents": "opalcss"
+    },
+    {
+      "trigger": "pfm\tPfm Filter",
+      "contents": "pfm"
+    },
+    {
+      "trigger": "pixie\tPixie Filter",
+      "contents": "pixie"
+    },
+    {
+      "trigger": "plates\tPlates Filter",
+      "contents": "plates"
+    },
+    {
+      "trigger": "pleeease\tPleeease Filter",
+      "contents": "pleeease"
+    },
+    {
+      "trigger": "postcss\tPostcss Filter",
+      "contents": "postcss"
+    },
+    {
+      "trigger": "posthtml\tPosthtml Filter",
+      "contents": "posthtml"
+    },
+    {
+      "trigger": "precss\tPrecss Filter",
+      "contents": "precss"
+    },
+    {
+      "trigger": "prettier\tPrettier Filter",
+      "contents": "prettier"
+    },
+    {
+      "trigger": "prismjs\tPrismjs Filter",
+      "contents": "prismjs"
+    },
+    {
+      "trigger": "pug\tPug Filter",
+      "contents": "pug"
+    },
+    {
+      "trigger": "pupa\tPupa Filter",
+      "contents": "pupa"
+    },
+    {
+      "trigger": "purifycss\tPurifycss Filter",
+      "contents": "purifycss"
+    },
+    {
+      "trigger": "qejs\tQejs Filter",
+      "contents": "qejs"
+    },
+    {
+      "trigger": "ractive\tRactive Filter",
+      "contents": "ractive"
+    },
+    {
+      "trigger": "remark\tRemark Filter",
+      "contents": "remark"
+    },
+    {
+      "trigger": "remarkable\tRemarkable Filter",
+      "contents": "remarkable"
+    },
+    {
+      "trigger": "reshape\tReshape Filter",
+      "contents": "reshape"
+    },
+    {
+      "trigger": "resin\tResin Filter",
+      "contents": "resin"
+    },
+    {
+      "trigger": "rework\tRework Filter",
+      "contents": "rework"
+    },
+    {
+      "trigger": "rho\tRho Filter",
+      "contents": "rho"
+    },
+    {
+      "trigger": "riotjs\tRiotjs Filter",
+      "contents": "riotjs"
+    },
+    {
+      "trigger": "rollup\tRollup Filter",
+      "contents": "rollup"
+    },
+    {
+      "trigger": "sass\tSass Filter",
+      "contents": "sass"
+    },
+    {
+      "trigger": "scss\tScss Filter",
+      "contents": "scss"
+    },
+    {
+      "trigger": "sheetify\tSheetify Filter",
+      "contents": "sheetify"
+    },
+    {
+      "trigger": "slm\tSlm Filter",
+      "contents": "slm"
+    },
+    {
+      "trigger": "string-template\tStringTemplate Filter",
+      "contents": "string-template"
+    },
+    {
+      "trigger": "styl\tStyl Filter",
+      "contents": "styl"
+    },
+    {
+      "trigger": "stylecow\tStylecow Filter",
+      "contents": "stylecow"
+    },
+    {
+      "trigger": "stylus\tStylus Filter",
+      "contents": "stylus"
+    },
+    {
+      "trigger": "sugarml\tSugarml Filter",
+      "contents": "sugarml"
+    },
+    {
+      "trigger": "suitcss\tSuitcss Filter",
+      "contents": "suitcss"
+    },
+    {
+      "trigger": "supermarked\tSupermarked Filter",
+      "contents": "supermarked"
+    },
+    {
+      "trigger": "svgo\tSvgo Filter",
+      "contents": "svgo"
+    },
+    {
+      "trigger": "sweetjs\tSweetjs Filter",
+      "contents": "sweetjs"
+    },
+    {
+      "trigger": "swig\tSwig Filter",
+      "contents": "swig"
+    },
+    {
+      "trigger": "templayed\tTemplayed Filter",
+      "contents": "templayed"
+    },
+    {
+      "trigger": "to-markdown\tToMarkdown Filter",
+      "contents": "to-markdown"
+    },
+    {
+      "trigger": "toffee\tToffee Filter",
+      "contents": "toffee"
+    },
+    {
+      "trigger": "toml\tToml Filter",
+      "contents": "toml"
+    },
+    {
+      "trigger": "traceur\tTraceur Filter",
+      "contents": "traceur"
+    },
+    {
+      "trigger": "transparency\tTransparency Filter",
+      "contents": "transparency"
+    },
+    {
+      "trigger": "twig\tTwig Filter",
+      "contents": "twig"
+    },
+    {
+      "trigger": "twing\tTwing Filter",
+      "contents": "twing"
+    },
+    {
+      "trigger": "typescript\tTypescript Filter",
+      "contents": "typescript"
+    },
+    {
+      "trigger": "typeset\tTypeset Filter",
+      "contents": "typeset"
+    },
+    {
+      "trigger": "uglify-css\tUglifyCss Filter",
+      "contents": "uglify-css"
+    },
+    {
+      "trigger": "uglify-es\tUglifyEs Filter",
+      "contents": "uglify-es"
+    },
+    {
+      "trigger": "uglify-js\tUglifyJs Filter",
+      "contents": "uglify-js"
+    },
+    {
+      "trigger": "underscore\tUnderscore Filter",
+      "contents": "underscore"
+    },
+    {
+      "trigger": "vash\tVash Filter",
+      "contents": "vash"
+    },
+    {
+      "trigger": "verbatim\tVerbatim Filter",
+      "contents": "verbatim"
+    },
+    {
+      "trigger": "walrus\tWalrus Filter",
+      "contents": "walrus"
+    },
+    {
+      "trigger": "webpack\tWebpack Filter",
+      "contents": "webpack"
+    },
+    {
+      "trigger": "whiskers\tWhiskers Filter",
+      "contents": "whiskers"
+    },
+    {
+      "trigger": "xml2js\tXml2Js Filter",
+      "contents": "xml2js"
     },
     {
       "trigger": "yaml\tYaml Filter",

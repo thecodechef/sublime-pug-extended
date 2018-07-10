@@ -3,24 +3,23 @@
 
 scope: constant.language.filter.name.pug
 completions:
-  # [TODO]: Need to Complete this list of filter completions.
   - {trigger: "absurd\tAbsurd Filter", contents: "absurd"} # Absurd Filter
   - {trigger: "analyze-css\tAnalyzeCss Filter", contents: "analyze-css"} # AnalyzeCss Filter
   - {trigger: "atpl\tAtpl Filter", contents: "atpl"} # Atpl Filter
   - {trigger: "autoprefixer\tAutoprefixer Filter", contents: "autoprefixer"} # Autoprefixer Filter
-  - {trigger: "babel\tBabelJS Filter", contents: "babel"} # BabelJS Filter
+  - {trigger: "babel\tBabel Filter", contents: "babel"} # Babel Filter
   - {trigger: "bless\tBless Filter", contents: "bless"} # Bless Filter
   - {trigger: "bliss\tBliss Filter", contents: "bliss"} # Bliss Filter
   - {trigger: "bracket-template\tBracketTemplate Filter", contents: "bracket-template"} # BracketTemplate Filter
   - {trigger: "browserify\tBrowserify Filter", contents: "browserify"} # Browserify Filter
-  - {trigger: "buble\tBubleJS Filter", contents: "buble"} # BubleJS Filter
+  - {trigger: "buble\tBuble Filter", contents: "buble"} # Buble Filter
   - {trigger: "cdata\tCdata Filter", contents: "cdata"} # Cdata Filter
   - {trigger: "cdata-css\tCdataCss Filter", contents: "cdata-css"} # CdataCss Filter
-  - {trigger: "cdata-js\tCdataJS Filter", contents: "cdata-js"} # CdataJS Filter
+  - {trigger: "cdata-js\tCdataJs Filter", contents: "cdata-js"} # CdataJs Filter
   - {trigger: "clean-css\tCleanCss Filter", contents: "clean-css"} # CleanCss Filter
   - {trigger: "coffee-script\tCoffeeScript Filter", contents: "coffee-script"} # CoffeeScript Filter
-  - {trigger: "coffeecup\tCoffeeCup Filter", contents: "coffeecup"} # CoffeeCup Filter
-  - {trigger: "coffeekup\tCoffeeKup Filter", contents: "coffeekup"} # CoffeeKup Filter
+  - {trigger: "coffeecup\tCoffeecup Filter", contents: "coffeecup"} # Coffeecup Filter
+  - {trigger: "coffeekup\tCoffeekup Filter", contents: "coffeekup"} # Coffeekup Filter
   - {trigger: "colon-template\tColonTemplate Filter", contents: "colon-template"} # ColonTemplate Filter
   - {trigger: "combyne\tCombyne Filter", contents: "combyne"} # Combyne Filter
   - {trigger: "commonmark\tCommonmark Filter", contents: "commonmark"} # Commonmark Filter
@@ -30,21 +29,139 @@ completions:
   - {trigger: "css-beautify\tCssBeautify Filter", contents: "css-beautify"} # CssBeautify Filter
   - {trigger: "css-whitespace\tCssWhitespace Filter", contents: "css-whitespace"} # CssWhitespace Filter
   - {trigger: "csso\tCsso Filter", contents: "csso"} # Csso Filter
-  - {trigger: "decaffinate\tDecaffinate Filter", contents: "decaffinate"} # Decaffinate Filter
+  - {trigger: "decaffeinate\tDecaffeinate Filter", contents: "decaffeinate"} # Decaffeinate Filter
   - {trigger: "dot\tDot Filter", contents: "dot"} # Dot Filter
   - {trigger: "duo\tDuo Filter", contents: "duo"} # Duo Filter
   - {trigger: "dust\tDust Filter", contents: "dust"} # Dust Filter
-  - {trigger: "earlgrey\tEarlgrey Filter", contents: "earlgrey"} # Earl Filter
+  - {trigger: "earlgrey\tEarlgrey Filter", contents: "earlgrey"} # Earlgrey Filter
   - {trigger: "eco\tEco Filter", contents: "eco"} # Eco Filter
   - {trigger: "ect\tEct Filter", contents: "ect"} # Ect Filter
-  - {trigger: "ejs\tEjs Filter", contents: "ejs"} # EJS Filter
+  - {trigger: "ejs\tEjs Filter", contents: "ejs"} # Ejs Filter
   - {trigger: "engine\tEngine Filter", contents: "engine"} # Engine Filter
   - {trigger: "envy-json\tEnvyJson Filter", contents: "envy-json"} # EnvyJson Filter
-  - {trigger: "es6-template\tES6Template Filter", contents: "es6-template"} # ES6Template Filter
-  - {trigger: "es6-template-strings\tES6TemplateStrings Filter", contents: "es6-template-strings"} # ES6TemplateStrings Filter
+  - {trigger: "es6-template\tEs6 Template Filter", contents: "es6-template"} # Es6 Template Filter
+  - {trigger: "es6-template-strings\tEs6 Template Strings Filter", contents: "es6-template-strings"} # Es6 Template Strings Filter
   - {trigger: "escape-html\tEscapeHtml Filter", contents: "escape-html"} # EscapeHtml Filter
-  - {trigger: "esformatter\tESformatter Filter", contents: "esformatter"} # ESformatter Filter
-  - {trigger: "esnext\tEsNext Filter", contents: "esnext"} # EsNext Filter
+  - {trigger: "esformatter\tEsformatter Filter", contents: "esformatter"} # Esformatter Filter
+  - {trigger: "esnext\tEsnext Filter", contents: "esnext"} # Esnext Filter
   - {trigger: "fest\tFest Filter", contents: "fest"} # Fest Filter
   - {trigger: "function\tFunction Filter", contents: "function"} # Function Filter
+  - {trigger: "gotpl\tGotpl Filter", contents: "gotpl"} # Gotpl Filter
+  - {trigger: "gray-matter\tGrayMatter Filter", contents: "gray-matter"} # GrayMatter Filter
+  - {trigger: "haml\tHaml Filter", contents: "haml"} # Haml Filter
+  - {trigger: "haml-coffee\tHamlCoffee Filter", contents: "haml-coffee"} # HamlCoffee Filter
+  - {trigger: "hamlet\tHamlet Filter", contents: "hamlet"} # Hamlet Filter
+  - {trigger: "hamljs\tHamljs Filter", contents: "hamljs"} # Hamljs Filter
+  - {trigger: "handlebars\tHandlebars Filter", contents: "handlebars"} # Handlebars Filter
+  - {trigger: "highlight\tHighlight Filter", contents: "highlight"} # Highlight Filter
+  - {trigger: "hjson\tHjson Filter", contents: "hjson"} # Hjson Filter
+  - {trigger: "hogan\tHogan Filter", contents: "hogan"} # Hogan Filter
+  - {trigger: "html-beautify\tHtmlBeautify Filter", contents: "html-beautify"} # HtmlBeautify Filter
+  - {trigger: "html-minifier\tHtmlMinifier Filter", contents: "html-minifier"} # HtmlMinifier Filter
+  - {trigger: "html2jade\tHtml2 Jade Filter", contents: "html2jade"} # Html2 Jade Filter
+  - {trigger: "htmling\tHtmling Filter", contents: "htmling"} # Htmling Filter
+  - {trigger: "i-template\tITemplate Filter", contents: "i-template"} # ITemplate Filter
+  - {trigger: "iced-coffee-script\tIcedCoffee Script Filter", contents: "iced-coffee-script"} # IcedCoffee Script Filter
+  - {trigger: "imba\tImba Filter", contents: "imba"} # Imba Filter
+  - {trigger: "ini\tIni Filter", contents: "ini"} # Ini Filter
+  - {trigger: "j140\tJ140 Filter", contents: "j140"} # J140 Filter
+  - {trigger: "jade\tJade Filter", contents: "jade"} # Jade Filter
+  - {trigger: "jade-jekyll\tJadeJekyll Filter", contents: "jade-jekyll"} # JadeJekyll Filter
+  - {trigger: "jazz\tJazz Filter", contents: "jazz"} # Jazz Filter
+  - {trigger: "jqtpl\tJqtpl Filter", contents: "jqtpl"} # Jqtpl Filter
+  - {trigger: "js-beautify\tJsBeautify Filter", contents: "js-beautify"} # JsBeautify Filter
+  - {trigger: "jscss\tJscss Filter", contents: "jscss"} # Jscss Filter
+  - {trigger: "jscss-lite\tJscssLite Filter", contents: "jscss-lite"} # JscssLite Filter
+  - {trigger: "json\tJson Filter", contents: "json"} # Json Filter
+  - {trigger: "jsrender\tJsrender Filter", contents: "jsrender"} # Jsrender Filter
+  - {trigger: "jst\tJst Filter", contents: "jst"} # Jst Filter
+  - {trigger: "jstransformer\tJstransformer Filter", contents: "jstransformer"} # Jstransformer Filter
+  - {trigger: "jsx\tJsx Filter", contents: "jsx"} # Jsx Filter
+  - {trigger: "just\tJust Filter", contents: "just"} # Just Filter
+  - {trigger: "katex\tKatex Filter", contents: "katex"} # Katex Filter
+  - {trigger: "lebab\tLebab Filter", contents: "lebab"} # Lebab Filter
+  - {trigger: "less\tLess Filter", contents: "less"} # Less Filter
+  - {trigger: "liquid\tLiquid Filter", contents: "liquid"} # Liquid Filter
+  - {trigger: "liquor\tLiquor Filter", contents: "liquor"} # Liquor Filter
+  - {trigger: "livescript\tLivescript Filter", contents: "livescript"} # Livescript Filter
+  - {trigger: "lodash\tLodash Filter", contents: "lodash"} # Lodash Filter
+  - {trigger: "markdown\tMarkdown Filter", contents: "markdown"} # Markdown Filter
+  - {trigger: "markdown-it\tMarkdownIt Filter", contents: "markdown-it"} # MarkdownIt Filter
+  - {trigger: "markdown-yml\tMarkdownYml Filter", contents: "markdown-yml"} # MarkdownYml Filter
+  - {trigger: "marked\tMarked Filter", contents: "marked"} # Marked Filter
+  - {trigger: "marko\tMarko Filter", contents: "marko"} # Marko Filter
+  - {trigger: "marky-markdown\tMarkyMarkdown Filter", contents: "marky-markdown"} # MarkyMarkdown Filter
+  - {trigger: "mathjax\tMathjax Filter", contents: "mathjax"} # Mathjax Filter
+  - {trigger: "mdast\tMdast Filter", contents: "mdast"} # Mdast Filter
+  - {trigger: "megamark\tMegamark Filter", contents: "megamark"} # Megamark Filter
+  - {trigger: "microtemplate\tMicrotemplate Filter", contents: "microtemplate"} # Microtemplate Filter
+  - {trigger: "mini-handlebars\tMiniHandlebars Filter", contents: "mini-handlebars"} # MiniHandlebars Filter
+  - {trigger: "mjml\tMjml Filter", contents: "mjml"} # Mjml Filter
+  - {trigger: "mmd\tMmd Filter", contents: "mmd"} # Mmd Filter
+  - {trigger: "mold\tMold Filter", contents: "mold"} # Mold Filter
+  - {trigger: "mote\tMote Filter", contents: "mote"} # Mote Filter
+  - {trigger: "move\tMove Filter", contents: "move"} # Move Filter
+  - {trigger: "mustache\tMustache Filter", contents: "mustache"} # Mustache Filter
+  - {trigger: "myth\tMyth Filter", contents: "myth"} # Myth Filter
+  - {trigger: "node-twig\tNodeTwig Filter", contents: "node-twig"} # NodeTwig Filter
+  - {trigger: "nunjucks\tNunjucks Filter", contents: "nunjucks"} # Nunjucks Filter
+  - {trigger: "nunjucks-node\tNunjucksNode Filter", contents: "nunjucks-node"} # NunjucksNode Filter
+  - {trigger: "octet\tOctet Filter", contents: "octet"} # Octet Filter
+  - {trigger: "opalcss\tOpalcss Filter", contents: "opalcss"} # Opalcss Filter
+  - {trigger: "pfm\tPfm Filter", contents: "pfm"} # Pfm Filter
+  - {trigger: "pixie\tPixie Filter", contents: "pixie"} # Pixie Filter
+  - {trigger: "plates\tPlates Filter", contents: "plates"} # Plates Filter
+  - {trigger: "pleeease\tPleeease Filter", contents: "pleeease"} # Pleeease Filter
+  - {trigger: "postcss\tPostcss Filter", contents: "postcss"} # Postcss Filter
+  - {trigger: "posthtml\tPosthtml Filter", contents: "posthtml"} # Posthtml Filter
+  - {trigger: "precss\tPrecss Filter", contents: "precss"} # Precss Filter
+  - {trigger: "prettier\tPrettier Filter", contents: "prettier"} # Prettier Filter
+  - {trigger: "prismjs\tPrismjs Filter", contents: "prismjs"} # Prismjs Filter
+  - {trigger: "pug\tPug Filter", contents: "pug"} # Pug Filter
+  - {trigger: "pupa\tPupa Filter", contents: "pupa"} # Pupa Filter
+  - {trigger: "purifycss\tPurifycss Filter", contents: "purifycss"} # Purifycss Filter
+  - {trigger: "qejs\tQejs Filter", contents: "qejs"} # Qejs Filter
+  - {trigger: "ractive\tRactive Filter", contents: "ractive"} # Ractive Filter
+  - {trigger: "remark\tRemark Filter", contents: "remark"} # Remark Filter
+  - {trigger: "remarkable\tRemarkable Filter", contents: "remarkable"} # Remarkable Filter
+  - {trigger: "reshape\tReshape Filter", contents: "reshape"} # Reshape Filter
+  - {trigger: "resin\tResin Filter", contents: "resin"} # Resin Filter
+  - {trigger: "rework\tRework Filter", contents: "rework"} # Rework Filter
+  - {trigger: "rho\tRho Filter", contents: "rho"} # Rho Filter
+  - {trigger: "riotjs\tRiotjs Filter", contents: "riotjs"} # Riotjs Filter
+  - {trigger: "rollup\tRollup Filter", contents: "rollup"} # Rollup Filter
+  - {trigger: "sass\tSass Filter", contents: "sass"} # Sass Filter
+  - {trigger: "scss\tScss Filter", contents: "scss"} # Scss Filter
+  - {trigger: "sheetify\tSheetify Filter", contents: "sheetify"} # Sheetify Filter
+  - {trigger: "slm\tSlm Filter", contents: "slm"} # Slm Filter
+  - {trigger: "string-template\tStringTemplate Filter", contents: "string-template"} # StringTemplate Filter
+  - {trigger: "styl\tStyl Filter", contents: "styl"} # Styl Filter
+  - {trigger: "stylecow\tStylecow Filter", contents: "stylecow"} # Stylecow Filter
+  - {trigger: "stylus\tStylus Filter", contents: "stylus"} # Stylus Filter
+  - {trigger: "sugarml\tSugarml Filter", contents: "sugarml"} # Sugarml Filter
+  - {trigger: "suitcss\tSuitcss Filter", contents: "suitcss"} # Suitcss Filter
+  - {trigger: "supermarked\tSupermarked Filter", contents: "supermarked"} # Supermarked Filter
+  - {trigger: "svgo\tSvgo Filter", contents: "svgo"} # Svgo Filter
+  - {trigger: "sweetjs\tSweetjs Filter", contents: "sweetjs"} # Sweetjs Filter
+  - {trigger: "swig\tSwig Filter", contents: "swig"} # Swig Filter
+  - {trigger: "templayed\tTemplayed Filter", contents: "templayed"} # Templayed Filter
+  - {trigger: "to-markdown\tToMarkdown Filter", contents: "to-markdown"} # ToMarkdown Filter
+  - {trigger: "toffee\tToffee Filter", contents: "toffee"} # Toffee Filter
+  - {trigger: "toml\tToml Filter", contents: "toml"} # Toml Filter
+  - {trigger: "traceur\tTraceur Filter", contents: "traceur"} # Traceur Filter
+  - {trigger: "transparency\tTransparency Filter", contents: "transparency"} # Transparency Filter
+  - {trigger: "twig\tTwig Filter", contents: "twig"} # Twig Filter
+  - {trigger: "twing\tTwing Filter", contents: "twing"} # Twing Filter
+  - {trigger: "typescript\tTypescript Filter", contents: "typescript"} # Typescript Filter
+  - {trigger: "typeset\tTypeset Filter", contents: "typeset"} # Typeset Filter
+  - {trigger: "uglify-css\tUglifyCss Filter", contents: "uglify-css"} # UglifyCss Filter
+  - {trigger: "uglify-es\tUglifyEs Filter", contents: "uglify-es"} # UglifyEs Filter
+  - {trigger: "uglify-js\tUglifyJs Filter", contents: "uglify-js"} # UglifyJs Filter
+  - {trigger: "underscore\tUnderscore Filter", contents: "underscore"} # Underscore Filter
+  - {trigger: "vash\tVash Filter", contents: "vash"} # Vash Filter
+  - {trigger: "verbatim\tVerbatim Filter", contents: "verbatim"} # Verbatim Filter
+  - {trigger: "walrus\tWalrus Filter", contents: "walrus"} # Walrus Filter
+  - {trigger: "webpack\tWebpack Filter", contents: "webpack"} # Webpack Filter
+  - {trigger: "whiskers\tWhiskers Filter", contents: "whiskers"} # Whiskers Filter
+  - {trigger: "xml2js\tXml2Js Filter", contents: "xml2js"} # Xml2 Js Filter
   - {trigger: "yaml\tYaml Filter", contents: "yaml"} # Yaml Filter
