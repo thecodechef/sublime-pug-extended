@@ -1,5 +1,7 @@
 # Pug Extended
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/thecodechef/sublime-pug-extended.svg)](https://greenkeeper.io/)
+
 > Pug Extended for Sublime Text 3
 
 
